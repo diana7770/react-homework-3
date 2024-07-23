@@ -1,6 +1,8 @@
-const Transaction = ({ items }) => {
+import TransactionsItem from "../TransactionsItem/TransactionsItem";
+
+const Transactions = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <table className="transaction">
       <thead>
         <tr>
           <th>Type</th>
@@ -8,17 +10,14 @@ const Transaction = ({ items }) => {
           <th>Currency</th>
         </tr>
       </thead>
+
       <tbody>
-        {/* {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
+        {/* {items.map((item) => (
+          <TransactionsItem item={item} key={item.id} />
         ))} */}
       </tbody>
     </table>
   );
 };
 
-export default Transaction;
+export default Transactions;
